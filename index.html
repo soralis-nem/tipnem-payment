@@ -5,30 +5,35 @@
 	<title>tipnem Payment</title>
 	<script type="text/javascript">
 		function create(){
-		var to = form1.to.value;
-		var amount = form1.amount.value;
-		var name = encodeURIComponent(form1.name.value);
-		var url = "https://twitter.com/intent/tweet?text=%40tipnem%20tip%20%40"+to+"%20"+amount+"%20"+name+"%20%23tipnem%e6%b1%ba%e6%b8%88&url=http://xembook.net/tipnem.html";
-		var qr = "http://chart.apis.google.com/chart?chs=547x547&cht=qr&chl="+url;
-		document.write('決済用QRコードです');
-		document.write('<img src='+qr+' width="256" height="256" />');
-		document.write('<a href='+url+' >試す</a>');
-	}
-</script>
+			var to = form1.to.value;
+			var amount = form1.amount.value;
+			var name = encodeURIComponent(form1.name.value);
+			var url = "https://twitter.com/intent/tweet?text=%40tipnem%20tip%20%40"+to+"%20"+amount+"%20"+name+"%20%23tipnem%e6%b1%ba%e6%b8%88&url=http://xembook.net/tipnem.html";
+			var qr = "http://chart.apis.google.com/chart?chs=547x547&cht=qr&chl="+url;
+			document.write('決済用QRコードです');
+			document.write('<img src='+qr+' width="256" height="256" />');
+			document.write('<a href='+url+' >試す</a>');
+		}
+	</script>
+	<link href="http://cdn.muicss.com/mui-0.9.28/css/mui.min.css" rel="stylesheet" type="text/css" />
+	<script src="http://cdn.muicss.com/mui-0.9.28/js/mui.min.js"></script>
 </head>
 
 <body>
 	<form name="form1" action="index.html">
-		送る相手
-		<input type="text" name="to" required>
-		<br>
-		数量
-		<input type="text" name="amount" >
-		<br>
-		mosaic名
-		<input type="text" name="name" required>
-		<br>
-		<input type="button" value="作成" onclick="create()">
+		<div class="mui-textfield">
+			<input type="text"　name="to" required>
+			<label>送る相手</label>
+		</div>
+		<div class="mui-textfield">
+			<input type="text"　name="amount" required>
+			<label>数量</label>
+		</div>
+		<div class="mui-textfield">
+			<input type="text"　name="name" required>
+			<label>mosaic名</label>
+		</div>
+		<button type="button" onclick="create() " class="mui-btn mui-btn--primary" >作成</button>
 	</form>
 </body>
 </html>
