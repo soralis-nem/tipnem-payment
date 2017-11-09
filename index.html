@@ -9,7 +9,8 @@
 			var to = encodeURIComponent(form1.to.value);
 			var amount = form1.amount.value;
 			var name = encodeURIComponent(form1.name.value);
-			var url = "https://twitter.com/intent/tweet?text=%40tipnem%20tip%20"+to+"%20"+amount+"%20"+name+"&hashtags=tipnem%e6%b1%ba%e6%b8%88";
+			var comment = encodeURIComponent(form1.comment.value);
+			var url = "https://twitter.com/intent/tweet?text=%40tipnem%20tip%20"+to+"%20"+amount+"%20"+name+"%20"+comment+"&hashtags=tipnem%e6%b1%ba%e6%b8%88";
 			var qr = "http://chart.apis.google.com/chart?chs=547x547&cht=qr&chl="+encodeURIComponent(url);
 			document.getElementById("disp").style.display="block";
 			qrcode.src=qr;
@@ -28,12 +29,16 @@
 				<label>送る相手</label>
 			</div>
 			<div class="mui-textfield" name=input" >
-				<input type="text" name="amount" value="10" required>
+				<input type="text" name="amount" value="0.01" required>
 				<label>数量</label>
 			</div>
 			<div class="mui-textfield" name=input" >
 				<input type="text" name="name" value="xem" required>
 				<label>mosaic名</label>
+			</div>
+			<div class="mui-textfield" name=input" >
+				<input type="text" name="comment" value="">
+				<label>コメント</label>
 			</div>
 			<button type="button" onclick="create() " class="mui-btn mui-btn--primary" >作成</button>
 		</form>
