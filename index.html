@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>tipnem Payment</title>
+	<script type="text/javascript">
+		function create(){
+		var to = form1.to.value;
+		var amount = form1.amount.value;
+		var name = encodeURIComponent(form1.name.value);
+		var url = "https://twitter.com/intent/tweet?text=%40tipnem%20tip%20%40"+to+"%20"+amount+"%20"+name+"%20%23tipnem%e6%b1%ba%e6%b8%88&url=http://xembook.net/tipnem.html";
+		var qr = "http://chart.apis.google.com/chart?chs=547x547&cht=qr&chl="+url;
+		document.write('決済用QRコードです');
+		document.write('<img src='+qr+' width="256" height="256" />');
+		document.write('<a href='+url+' >試す</a>');
+	}
+</script>
+</head>
+
+<body>
+	<form name="form1" action="index.html">
+		送る相手
+		<input type="text" name="to">
+		<br>
+		数量
+		<input type="text" name="amount">
+		<br>
+		mosaic名
+		<input type="text" name="name">
+		<br>
+		<input type="button" value="Sample1" onclick="create()">
+	</form>
+</body>
+</html>
