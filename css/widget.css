@@ -1,5 +1,6 @@
 @import url("https://cdn.muicss.com/mui-0.9.28/css/mui.min.css");
 #tipnem_back {
+    z-index: 998;
     position: fixed; 
     left: 0px;
     top: 0px;
@@ -9,6 +10,7 @@
     opacity: 0.20;
 }
 #tipnem_widget {
+    z-index: 999;
     display: none;  /* 初期表示は非表示 */
     position: fixed; 
     left: 50%;
