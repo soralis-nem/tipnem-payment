@@ -8,8 +8,6 @@
 	<!-- MUI -->
 	<link href="https://cdn.muicss.com/mui-0.9.28/css/mui.min.css" rel="stylesheet" type="text/css" />
 	<script src="https://cdn.muicss.com/mui-0.9.28/js/mui.min.js"></script>
-	<!-- QR -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/qartjs/1.0.2/qart.min.js"></script>
 	<link href="css/widget.css" rel="stylesheet" type="text/css" />
 	<script src="js/main.js"></script>
 	<script src="js/widget.js"></script>
@@ -18,7 +16,7 @@
 
 <body>
 
-	<button id="show">a</button>
+	<button id="show">TipNemで寄付する</button>
 <!-- レイヤー -->
 <div id="layer">
 </div>
@@ -43,13 +41,10 @@
 				<input type="text" name="comment" >
 				<label>コメント</label>
 			</div>
-			<button type="button" onclick="create() " class="mui-btn mui-btn--primary" >送る</button>
+			<button type="button" id="tip" class="mui-btn mui-btn--primary" >送る</button>
 			<button type="button" id="show-qr" class="mui-btn mui-btn--primary" >QR</button>
 		</form>
-
-	<div id="qr">
-		<div id="combine"></div>
-	</div>
+		<img src="" width="256" height="256" id="qrcode" >
 </div>
 </body>
 </html>
