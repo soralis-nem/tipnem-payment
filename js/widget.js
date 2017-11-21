@@ -2,7 +2,6 @@ function GetScriptParams()
 {
     var scripts = document.getElementsByTagName( 'script' );
     var src = scripts[ scripts.length - 1 ].src;
-    alert(src);
 
     var query = src.substring( src.indexOf( '?' ) + 1 );
     var parameters = query.split( '&' );
